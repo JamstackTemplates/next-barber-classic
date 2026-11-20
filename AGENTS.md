@@ -72,3 +72,14 @@ and Pages never import/read it. Keep site.config.json, the form and workflow out
 light/dark captures after a fresh normal build and run node --test jamstacks/config.test.mjs separately.
 Each new template needs its own business-led layout/fonts/art and OG image; do not ship the neutral
 starter as a final design. Remove `plan/` and `.claude/skills/` before publishing a gallery template once reviewed.
+
+## File ownership (Straight Razor & Co. Barbers)
+
+- `content/business.ts`: shop name, address, phone, email, weekly `hours`, `lastWalkInMinutesBeforeClose`, founding year and Contact enquiry copy.
+- `content/services.ts`: `serviceSections`, `services` (prices, durations, availability, 5 favourites) and `validateServices()`.
+- `content/barbers.ts`: the 4 `barbers` (chairs 1–4, `days`, `knownFor` service IDs, `tool`, `bio`) and `validateBarbers()`.
+- `app/page.tsx`, `app/prices/page.tsx`, `app/barbers/page.tsx`, `app/visit/page.tsx`, `app/contact/page.tsx`, `app/not-found.tsx`: page-specific copy and section order as JSX children of named components.
+- `components/art/*`: bespoke inline SVG artwork (`barber-pole.tsx`, `wordmark.tsx`, `corner-shop-window.tsx`, `dividers.tsx`, `take-a-number.tsx`, `barber-portraits.tsx`, `ritual-vignettes.tsx`, `empty-chair.tsx`, `icons.tsx`).
+- `components/*-sections.tsx`, `components/felt-letter-board.tsx`, `components/hours-ledger.tsx`, `components/price-jump-bar.tsx`, `components/open-badge.tsx`: semantic layout, styling and browser-only interactions.
+- `lib/hours.ts`: schedule validation, last walk-in calculation, 12-hour formatting and DST-safe `shopStatus()` in `America/Chicago`.
+- `lib/structured-data.ts`: `HairSalon` JSON-LD derived from `content/business.ts` and `content/services.ts`.

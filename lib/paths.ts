@@ -27,6 +27,12 @@ export function absoluteUrl(path: string): string | undefined {
   return site.url ? `${site.url}${route(path)}` : undefined;
 }
 
+/** Absolute URL for a static public asset (no trailing slash), or undefined when site URL is unknown. */
+export function absoluteAssetUrl(path: string): string | undefined {
+  if (!path.startsWith('/')) throw new Error(`Asset paths must start with "/": ${path}`);
+  return site.url ? `${site.url}${path}` : undefined;
+}
+
 export const CONTACT_ROUTE = '/contact/';
 
 /** Contact is entered and left with full-document navigation (see components/site-link.tsx). */

@@ -1,1 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#2457a7"/><path d="M17 20h30v24H17zM24 14v36M40 14v36" fill="none" stroke="#fff" stroke-width="4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="pole-tube">
+      <rect x="23" y="15" width="18" height="34" rx="2"/>
+    </clipPath>
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8C6322"/>
+      <stop offset="45%" stop-color="#F2D283"/>
+      <stop offset="100%" stop-color="#9A6E26"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#6B1624"/>
+  <rect x="3" y="3" width="58" height="58" rx="9.5" fill="none" stroke="#D9AE5F" stroke-width="1.5"/>
+  <!-- Brass caps & finials -->
+  <circle cx="32" cy="8.5" r="3.5" fill="url(#brass)" stroke="#23181A" stroke-width="1.2"/>
+  <path d="M20 15 Q32 10 44 15 Z" fill="url(#brass)" stroke="#23181A" stroke-width="1.2"/>
+  <path d="M20 49 Q32 54 44 49 Z" fill="url(#brass)" stroke="#23181A" stroke-width="1.2"/>
+  <circle cx="32" cy="55.5" r="3.5" fill="url(#brass)" stroke="#23181A" stroke-width="1.2"/>
+  <!-- Glass tube with oxblood, cream and navy spiral stripes -->
+  <rect x="23" y="15" width="18" height="34" fill="#FBF5E8"/>
+  <g clip-path="url(#pole-tube)">
+    <g transform="rotate(-24 32 32)">
+      <rect x="10" y="6" width="44" height="7" fill="#8F2232"/>
+      <rect x="10" y="18" width="44" height="7" fill="#22314A"/>
+      <rect x="10" y="30" width="44" height="7" fill="#8F2232"/>
+      <rect x="10" y="42" width="44" height="7" fill="#22314A"/>
+      <rect x="10" y="54" width="44" height="7" fill="#8F2232"/>
+    </g>
+    <rect x="25.5" y="15" width="3.5" height="34" fill="#FFFFFF" opacity="0.38"/>
+  </g>
+  <rect x="23" y="15" width="18" height="34" fill="none" stroke="#23181A" stroke-width="1.5"/>
+</svg>

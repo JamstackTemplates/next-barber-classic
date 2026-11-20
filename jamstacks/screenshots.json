@@ -1,0 +1,22 @@
+{
+  "templateId": "next-barber-classic",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fullPage": false,
+  "captures": [
+    {
+      "mode": "light",
+      "sha256": "5b8565b53498928d114a2de639e875831524084ac3eeb6b487c33f67a439f620",
+      "file": "jamstacks/home-light.jpg",
+      "bytes": 228328
+    },
+    {
+      "mode": "dark",
+      "sha256": "c87fb597780276602b1059a1466a6e92466f79e6a96a03f6e9b6ebf4890c69ac",
+      "file": "jamstacks/home-dark.jpg",
+      "bytes": 208108
+    }
+  ]
+}
